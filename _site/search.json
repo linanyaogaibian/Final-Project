@@ -6,15 +6,20 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-14T21:41:24+08:00"
+      "last_modified": "2021-08-14T22:00:35+08:00"
     },
     {
       "path": "index.html",
       "title": "Final Project",
       "description": "Welcome to the website. I hope you enjoy it!\n",
       "author": [],
+<<<<<<< HEAD
       "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n  \r\n    \r\n      \r\n        \r\n        \r\n        \r\n      \r\n      \r\n    \r\n    \r\n      \r\n  Home\r\n\r\n\r\n  About\r\n\r\n\r\n  Proposal\r\n\r\n      \r\n  \r\n\r\n\r\n\r\n\r\n\r\n\r\nFinal Project\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n// add bootstrap table styles to pandoc tables\r\nfunction bootstrapStylePandocTables() {\r\n  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');\r\n}\r\n$(document).ready(function () {\r\n  bootstrapStylePandocTables();\r\n});\r\n\r\n\r\n\r\n$(document).ready(function () {\r\n  window.buildTabsets(\"TOC\");\r\n});\r\n\r\n$(document).ready(function () {\r\n  $('.tabset-dropdown > .nav-tabs > li').click(function () {\r\n    $(this).parent().toggleClass('nav-tabs-open')\r\n  });\r\n});\r\n\r\n  (function () {\r\n    var script = document.createElement(\"script\");\r\n    script.type = \"text/javascript\";\r\n    script.src  = \"https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\";\r\n    document.getElementsByTagName(\"head\")[0].appendChild(script);\r\n  })();\r\n",
       "last_modified": "2021-08-14T22:29:36+08:00"
+=======
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-08-14T22:00:35+08:00"
+>>>>>>> a55b55c537d46a02c7afd3f2d8a589403c99a1c7
     },
     {
       "path": "Proposal.html",
@@ -27,8 +32,13 @@
         }
       ],
       "date": "`r Sys.Date()`",
+<<<<<<< HEAD
       "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\r\nkk\r\n\r\n\r\n\r\n",
       "last_modified": "2021-08-14T22:34:13+08:00"
+=======
+      "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nASDFGHJK’\r\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-08-14T22:24:40+08:00"
+>>>>>>> a55b55c537d46a02c7afd3f2d8a589403c99a1c7
     }
   ],
   "collections": []
