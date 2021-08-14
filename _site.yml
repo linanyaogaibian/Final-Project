@@ -11,4 +11,6 @@ navbar:
       href: about.html
     - text: "Proposal"
       href: Proposal.html
-      output: distill::distill_article
+output:
+  distill::distill_article:
+    css: theme.css
