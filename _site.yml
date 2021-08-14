@@ -9,12 +9,8 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
-<<<<<<< HEAD
+    - text: "Proposal"
+      href: Proposal.html
 output:
   distill::distill_article:
     css: theme.css
-=======
-    - text: "Proposal"
-      href: Proposal.html
-      output: distill::distill_article
->>>>>>> 13547af6583b6771b42a5a380b7dcb8782c2cb85
