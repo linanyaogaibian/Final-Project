@@ -28,7 +28,7 @@
       ],
       "date": "`r Sys.Date()`",
       "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nASDFGHJK’\r\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-14T22:02:33+08:00"
+      "last_modified": "2021-08-14T22:10:54+08:00"
     }
   ],
   "collections": []
