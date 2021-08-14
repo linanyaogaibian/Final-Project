@@ -6,20 +6,20 @@
 #
 #    http://shiny.rstudio.com/
 #
-
+library(rgdal)
 library(tidyverse)
 library(tmap)
 library(sf)
 library(raster)
 library(clock)
 library(dplyr)
-library(rconnect)
+library(shinythemes)
 
 
 gps_path2 <- readRDS("data/gps_path2.rds")
 cc_loyal3 <- readRDS("data/cc_loyal3.rds")
 GPS_filter <- readRDS("data/GPS_filter.rds")
-bgmap <- raster("Data/MC2-tourist.tif")
+bgmap <- raster("data/MC2-tourist.tif")
 
 
 
@@ -32,7 +32,8 @@ list1<-append(my_list, named_list)
 
 list2<-seq(6, 19, by=1)
 
-ui <- fluidPage(titlePanel("Vehicle Tracking for Gastech Employee "),
+ui <- fluidPage(theme = shinytheme("cerulean"),
+    titlePanel("Vehicle Tracking for GAStech Employee "),
                 sidebarLayout(sidebarPanel(selectInput(inputId = "CarId",
                                                        label = "Car ID",
                                                        choices = list1,
@@ -88,4 +89,3 @@ server <- function(input, output,session) {
     })}
 
 shinyApp (ui=ui, server=server)
-
