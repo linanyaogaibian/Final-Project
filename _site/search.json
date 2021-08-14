@@ -14,7 +14,21 @@
       "description": "Welcome to the website. I hope you enjoy it!\n",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-08-14T21:41:26+08:00"
+      "last_modified": "2021-08-14T22:07:47+08:00"
+    },
+    {
+      "path": "Proposal.html",
+      "title": "Untitled",
+      "description": "A new article created using the Distill format.\n",
+      "author": [
+        {
+          "name": "Nora Jones",
+          "url": "https://example.com/norajones"
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-08-14T22:24:45+08:00"
     }
   ],
   "collections": []
