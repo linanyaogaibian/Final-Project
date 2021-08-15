@@ -1,15 +1,15 @@
 ---
-title: A Better Reproducible Poster Title
+title: Poster for Vast Challenge 2021 Project
 author:
   - name: Li NAN Li Yueting
     affil: 1
-    twitter: brentthorne18
+    LinkedIn: linkedin.com/in/li-nan-63b9251a6
     email: nan.li.2020@mitb.smu.edu.sg
     orcid: 0000-0002-1099-3857
     main: true
 affiliation:
   - num: 1
-    address: Department of Earth Sceicnes, Brock University
+    address: Department of Computer and Information Systems,Singapore Management University
 main_findings:
   - "Make **better posters** with RMarkdown + **posterdown**."
   - '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.main_pic}'
@@ -44,7 +44,10 @@ dev.off()
 
 # Introduction
 
-This is the `posterdown_betterland` template for the {posterdown} package! I was inspired by the twitter thread of [Mike Morrison](https://mobile.twitter.com/mikemorrison/status/1110191245035479041) and wanted to apply the `#betterposter` concept to the reproducible (yet simple to use) functionality of the {posterdown} package [@R-posterdown]. If you're not an R user don't sweat as you do **NOT** need to use it at all! Feel free to use only the Markdown functionality of this package :)
+This is the `poster` which provides an overview of our project which is based on Vast Challenge 2021.
+It includes the following sections:
+•	Issues and problems •	Motivation •	Approach •	Results •	Future Work 
+
 
 ```{r, include=FALSE}
 knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
