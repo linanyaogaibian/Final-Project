@@ -13,4 +13,4 @@ navbar:
       href: Proposal.html
 output:
   distill::distill_article:
-    css: theme.css
+  posterdown::posterdown_html
