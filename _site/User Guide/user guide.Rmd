@@ -1,0 +1,20 @@
+---
+title: "User Guide "
+description: |
+  User guide to help you know how to operate shiny app.
+author:
+  - name: Li Nan,Li Yueting 
+    university url: https://scis.smu.edu.sg/master-it-business
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+
+
+

@@ -7,14 +7,15 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
+    - text: "User Guide"
+      href: User Guide/user-guide.html
     - text: "Proposal"
       href: Proposal.html
-    - text: "Poster"
-      href: projectposter.html
     - text: "Paper"
-      href: paper.pdf
+      href: paper.html
+    - text: "Poster"
+      href: Poster/projectposter.html
+
 output:
   distill::distill_article:
 

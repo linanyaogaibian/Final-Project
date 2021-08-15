@@ -1,0 +1,24 @@
+---
+title: "Paper"
+description: |
+  Paper for Data Exploration of Vast Challenge 2021
+author:
+  - name: Li Nan,Li Yueting
+    LinkedIN url: linkedin.com/in/li-nan-63b9251a6
+    affiliation: Singapore Mangament University
+    affiliation_url: https://scis.smu.edu.sg/master-it-business
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r label,out.height = "700px", out.width = "100%",echo= FALSE,message=FALSE,fig.align='center',fig.pos='H'}
+knitr::include_graphics("Report/Report.pdf")
+```
+
+
+
+

@@ -8,9 +8,8 @@ author:
     email: ytli.2020@mitb.smu.edu.sg
     affiliation: Singapore Management University
 abstract: |
-  This is the abstract.
+  This Paper described the work of analysing Mini Challenge 1 and Mini Challenge 2 in VAST Challenge 2021 and the related shiny app created. 
 
-  It consists of two paragraphs.
 bibliography: sigproc.bib
 csl: acm-sig-proceedings.csl
 output: rticles::acm_article
@@ -23,29 +22,45 @@ library(rticles)
 
 # Introduction 
 This paper is based on analytics for the Mini-Challenge 1 & Mini-Challenge 2 of the VAST Challenge 2021.  
-In a fiction scenario,a gas-production company named Tethys-based GAStech has been operating a natural gas production site in the island country of Kronos and it has produced remarkable profits and developed strong relationships with the government of Kronos. However, GAStech has not been as successful in demonstrating environmental stewardship. And in January, 2014, the leaders of GAStech are celebrating their new-found fortune, but in the midst of this celebration, several employees of GAStech go missing. An organization known as the Protectors of Kronos (POK) is suspected in the disappearance, but things may not be what they seem.
-For this fiction scenario, we focus on mini-challenge1 and mini-challenge2 of VAST Challenge 2021.
+In a fiction scenario,a gas-production company named Tethys-based GAStech has been operating a natural gas production site in the island country of Kronos and it has produced remarkable profits and developed strong relationships with the government of Kronos. However, GAStech has not been as successful in demonstrating environmental stewardship. And in January, 2014, the leaders of GAStech are celebrating their new-found fortune, but in the midst of this celebration, several employees of GAStech went missing. An organization known as the Protectors of Kronos (POK) is suspected in the disappearance, therefore analysis are conducted and an application is created related to the analysis.
+For this fiction scenario, three Mini-challenges are provided by VAST Challenge 2021 and the focus of this paper will be on mini-challenge1 and mini-challenge2.
 
 - Mini-challenge1:
 
-Mini-challenge1 provides (adding more...)
+Mini-challenge1 provides mainly three kinds of data, News report details data related to the kidnapping events from various of Medias, and the email exchanges data of the company GAStech's employees. The data also consist of each employees' detailed information which enable analysts to do further analytics. A community detection can be processed in order to distinguish the relationship between employees. Moreover, time stamps of news as well as the email transctions can be denoted using these data.
 
 - Mini-challenge2 
 
-Mini-challenge2 provides 4 datasets to data analysts for exploration. These datasets contain 3 aspects. (Transaction/GPS/Car Assignment) Through data manipulation and visualization, it can be detected anomalies that appear in unmatched transaction records between loyalty card and debit/credit card and gps data also shows the unfamiliar movement for some employees.
-Through the background stated, this paper develops interactive visualization approaches to provide evidence and suspicious behaviors of GAStech employees. The introduction of this paper is followed by an explanation of our motivation and objectives in Section 2, then followed by Section 3 which details the data used and methodology selected. And Section 4 provides a visual overview of the final application and finally section 5 provides the conclusion and insights for this paper.
+Mini-challenge2 provides 4 datasets to data analysts for exploration. These datasets describe information about Transaction, GPS and Car Assignment. Through data manipulation and visualization, it can be detected anomalies that appear in unmatched transaction records between loyalty card and debit/credit card and GPS data also shows the unfamiliar movement for some employees.
+Through the background stated, this paper develops interactive visualization approaches to provide evidence and suspicious behaviors of GAStech employees. 
+
+The introduction of this paper is followed by an explanation of our motivation and objectives in Section 2, then followed by Section 3 which details the data used and methodology selected. And Section 4 provides a visual overview of the final application and finally section 5 provides the conclusion and insights for this paper.
 
 # MOTIVATION AND OBJECTIVES 
-This project was motivated by a desire to i) identify the complex relationships among all of these people and organizations.  ii) track data for the two weeks leading up to the disappearance, as well as credit card transactions and loyalty card usage data.
-To achieve these aims, the interactive tools are developed to addresses the following requirements: 
-(adding graphs and utility)
+This project was motivated by a desire to:
 
-- What is the suspicious pattern in company cars for employees’ personal and professional use? - i) utilize geographical visualization techniques to create car/truck routes of GAStech employees based on gps dataset and also label parking points of car (parking more than 5 minutes) to dig out suspicious movement patterns. 
-- how to utilize gps data to match card owners and the debit/credit card owners - ii) Create interactive transaction data table to track unusual credit/debit card transactions records of GAStech employees and compare them with car parking points shown in visualization map.
+i) identify the complex relationships among all of these people and organizations.  
+ii) track data for the two weeks leading up to the disappearance, as well as credit card transactions and loyalty card usage data.
+
+In order to reach the goal, interactive tools are developed to addresses the following requirements: 
+
+1)What is the frequency pattern pattern in news reported that related to the event?
+The answer is to visualize the pattern a heatmap can be adopted in order to see the timeline and when the event draws high media attention.
+What is the network between employees? is there any suspicious connections between them?
+
+2)A network graph will be presented to demonstrate the connections between employees. Also, in order to find out the most frequent email connections, the number of email engagement will be treated as the weight of the graph, and by altering the weight people may clearly realize the level of connections of communities in GAStech company.
+
+3)What is the suspicious pattern in company cars for employees’ personal and professional use? 
+To utilize geographical visualization techniques to create car/truck routes of GAStech employees based on GPS dataset and also label parking points of car (parking more than 5 minutes) to dig out suspicious movement patterns. 
+
+4)how to utilize GPS data to match card owners and the debit/credit card owners?
+To create interactive transaction data table to track unusual credit/debit card transactions records of GAStech employees and compare them with car parking points shown in visualization map.
 
 
 # METHODOLOGY 
+
 The paper utilize data in three aspects: 
+
 i)	Find relationships between different data tables and try to use different data manipulation methods (e.g. group and filter data) to deepen understandings of data story. 
 ii)	Based on the understanding of data, find explicit and effective data visualization methods to deal with varied data types (e.g. data table – currency data; spatial data – geospatial visualization).
 iii)	Point out and try to give reasonable explanations and insights of data anomalies based on data visualization tools.
@@ -59,6 +74,7 @@ iii)	Step 3 is to use different visualization packages to create visualization g
 iv)	Step 4 is to write reproducible report by using r markdown and create poster by using posterdown package.
 
   ![](image\dsworkflow.png)
+*Figure 1 - Workflow with Tidyverse*
 
 ## Shiny Architecture 
 Shiny is an R package that makes it easy to build interactive web apps straight from R. Users can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. The reason why choosing Shiny as interactive tool is as follows:
@@ -74,85 +90,65 @@ To give better understandings and guidance from users, we included a user guide 
 To create an interactive transaction data table, DT package in R is used. The R package DT provides an R interface to the JavaScript library DataTables. In this paper, loyalty dataset and credit/debit card dataset used by DT package is displayed as tables on HTML pages, and through argument settings, this data table provides filtering and sorting features.
 
   ![](image\mapdt.png)
+*Figure 2 - DataTables Overview*
 
 ### Route Map
 Thematic maps are geographical maps in which spatial data distributions are visualized. This package tmap offers a flexible, layer-based, and easy to use approach to create thematic maps, such as route map. Shiny package takes a fresh, interactive approach to telling the data story  Another package used in this map creation, sf, supports for simple features, a standardized way to encode spatial vector data.
 
   ![](image\routemap.png)
+*Figure 3 - Route Map Overview*
+
+### News heatmap
+A heatmap (or heat map) is efficient way to visualize hierarchical clustering. It allow us to simultaneously visualize clusters of news for different time and for different media. A color scheme is applied for the blocks to display ‘high’ and ‘low’ frequency values. ggplot2 is efficient in presenting this visualization.
+
+  ![](image\heatmap.png)
+*Figure 4 - Heat Map Overview*
 
 ### network connection
 awaiting to add...
 
-# DESCRIPTIONS OF PRODUCTS AND FINDINGS 
+*Figure 5 - Network Visualization Overview*
+
+# DELIVERATES AND FINDINGS 
 The final interactive graphs in the published web application, and an illustration of the potentially wide range of insights that can be gleaned from the application are briefly described below.
 What info can gain from Interactive route map
 - Residence:
 Here we can identify the living place by changing the input of “Tracking Day”, and we can see every day Car ID2(Azada_Las) will appear in this location, so we can identify its living place is here
 
   ![](image\fg2d11.png){width=20%,height=20%}
-*Figure 1 ID2_Day11_Starting point*
+*Figure 6 - ID2_Day11_Starting point*
 
   ![](image\id2d13.png)
-*Figure 4 ID2_Day13*
+*Figure 7 - ID2_Day13*
 
   ![](image\id2d14.png)
-*Figure 4ID2_Day14*
+*Figure 8 - ID2_Day14*
 
 - Match credit card owner and car owner
 
 Through the stopping points which show info about day and hour and the corresponding transaction record, users can easily see the relationships between car owners and credit card owner, which provides strong support for future detecting work for unusual transaction data.
 
   ![](image\mapover.png)
+*Figure 9 - Car Owner Matching*
 
 - Can detect people who gather together in one day 
 
 If we finally notice some suspicious people we can see their behaviors by clicking multiple Car IDs, we can detect in one day people who gather together in one place. 
 
   ![](image\mapdroplist.png)
+*Figure 10 - Select multiple IDs*
 
 # Conclusion and future improvement
 This paper set out the development of a web application targeted at providing an interactive visualization tool to help minimize time to have a thorough understanding of person’s background (e.g. car owner/credit card owner/daily movement/daily spend) and detect suspicious patterns.
 
-Adding on:...
+Also By observing the timeline, it helps people quickly locate the time point of the incident for interactive comparison. And the Network visualization demonstrate the personal & official connections between people, which enable analysts to quickly understand a person’s social network and identify possible suspects and insiders.
 
 However, shiny app also have some demerits that needs to be improved in the future.
 For the route map app:
 1.	Consider add “select all” action button. This will help to detect each day all the driver’s movement.
 2.	Instead of using Car ID as input, consider using Employee title and Employee department as input, which can help to find relationship between different departments.
 3.	 Consider Add starting time and end time in the tooltip, which can be more helpful for detecting suspicious gathering groups.
+For the Network Visualization:...
 
 # ACKNOWLEDGMENTS
 The authors thank Associate Professor, KAM Tin Seong, Singapore Management University for his support and guidance, Classmate Liu Yang Guang for giving advice and suggestions for data visualization and Classmate Syed Ahmad Zaki whose assignment expand ideas and logics.
-
-
-# References
-
----
-references:
-- id: meier2012
-  title: Professinal Android 4 Application Development
-  author: 
-  - family: Meier
-    given: Reto
-  type: book
-  publisher: John Wiley & Sons, Inc.
-  issued:
-    year: 2012
-    month: 5
-- id: fenner2012a
-  title: One-click science marketing
-  author:
-  - family: Fenner
-    given: Martin
-  container-title: Nature Materials
-  volume: 11
-  URL: 'https://doi.org/10.1038/nmat3283'
-  DOI: 10.1038/nmat3283
-  issue: 4
-  publisher: Nature Publishing Group
-  page: 261-263
-  type: article-journal
-  issued:
-    year: 2012
-    month: 3
-...
