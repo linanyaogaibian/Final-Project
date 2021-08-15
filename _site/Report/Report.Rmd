@@ -16,7 +16,10 @@ csl: acm-sig-proceedings.csl
 output: rticles::acm_article
 ---
 
-
+```{r, echo=FALSE,eval=FALSE}
+install.packages("rticles")
+library(rticles)
+```
 
 # Introduction 
 This paper is based on analytics for the Mini-Challenge 1 & Mini-Challenge 2 of the VAST Challenge 2021.  
@@ -153,4 +156,3 @@ references:
     year: 2012
     month: 3
 ...
-
