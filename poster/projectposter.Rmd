@@ -7,11 +7,16 @@ author:
     email: nan.li.2020@mitb.smu.edu.sg
     orcid: 0000-0002-1099-3857
     main: true
+<<<<<<< HEAD
 poster_height：23.39in
 poster_width：33.11in
+=======
+poster_height: "33.11in"
+poster_width: "23.39in"
+>>>>>>> f5a17ce84e42c18c1a5194f348491b934ba10626
 affiliation:
   - num: 1
-    address: Department of Computer and Information Systems,Singapore Management University
+    address: "Department of Computer and Information Systems,Singapore Management University"
 main_findings:
   - "Make **better posters** with RMarkdown + **posterdown**."
   - '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.main_pic}'
