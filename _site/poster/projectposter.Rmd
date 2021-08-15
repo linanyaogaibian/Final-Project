@@ -7,8 +7,6 @@ author:
     email: nan.li.2020@mitb.smu.edu.sg
     orcid: 0000-0002-1099-3857
     main: true
-poster_height: "33.11in"
-poster_width: "23.39in"
 affiliation:
   - num: 1
     address: Department of Computer and Information Systems,Singapore Management University
