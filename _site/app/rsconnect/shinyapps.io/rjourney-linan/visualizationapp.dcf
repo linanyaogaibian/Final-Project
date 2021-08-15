@@ -1,0 +1,13 @@
+name: visualizationapp
+title: visualizationapp
+username:
+account: rjourney-linan
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4492970
+bundleId: 4923561
+url: https://rjourney-linan.shinyapps.io/visualizationapp/
+when: 1628961672.31785
+lastSyncTime: 1628961672.31785
+asMultiple: FALSE
+asStatic: FALSE
