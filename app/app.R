@@ -7,20 +7,38 @@
 #    http://shiny.rstudio.com/
 #
 
-### install packages & library packages ###
-packages = c('igraph','tidygraph','ggraph','visNetwork',
-             'lubridate','clock','tidyverse',"tm",
-             'tidytext', "plyr",'widyr', 'wordcloud',
-             'DT', 'ggwordcloud','textplot','hms',"shinyWidgets",
-             'tidygraph', 'ggraph','igraph','flipTime',
-             "shiny","lubridate","ggplot2","dplyr","plotly",
-             "rgdal","tmap","sf","raster","clock","shinythemes")
-for(p in packages){
-    if(!require(p,character.only = T)){
-        install.packages(p)
-    }
-    library(p,character.only = T)
-}
+### library packages ###
+library(igraph)
+library(ggraph)
+library(tidygraph)
+library(visNetwork)
+library(lubridate)
+library(clock)
+library(tidyverse)
+library(tm)
+library(tidytext)
+library(plyr)
+library(widyr)
+library(wordcloud)
+library(DT)
+library(ggwordcloud)
+library(textplot)
+library(hms)
+library(shinyWidgets)
+library(tidygraph)
+library(ggraph)
+library(flipTime)
+library(shiny)
+library(lubridate)
+library(ggplot2)
+library(dplyr)
+library(plotly)
+library(rgdal)
+library(tmap)
+library(sf)
+library(raster)
+library(clock)
+library(shinythemes)
 
 ### load in data for MC1###
 GAStech_nodes_new <- readRDS("data source/MC1/rds/GAStech_nodes_new.rds")
