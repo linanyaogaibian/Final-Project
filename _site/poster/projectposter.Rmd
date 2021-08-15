@@ -5,7 +5,6 @@ author:
     affil: 1
     LinkedIn: linkedin.com/in/li-nan-63b9251a6
     email: nan.li.2020@mitb.smu.edu.sg
-    orcid: 0000-0002-1099-3857
     main: true
 poster_height: "33.11in"
 poster_width: "23.39in"
@@ -71,8 +70,13 @@ To create an interactive transaction data table, DT package in R is used. The R 
 
 Solution of issue 1:  Through data manipulation and visualization, this project labeled the stopping points and add tooltip to clarify and dig out more info of car movement and car owners. By input one or multiple Car ID and Tracking Day, users can observation employee’s daily routines and their home locations. Through this improvements, it can also provide the chance to identify their private or professional relationship by observing their daily connection and gathering spots.
 
+![](img/img2.png){width=100%}
 
 Solution of issue 2: Through the stopping points which show info about day and hour and the corresponding transaction record, users can easily see the relationships between car owners and credit card owner, which provides strong support for future detecting work for unusual transaction data.
+![](img/img4.png){width=100%}
+
+
+
 
 # Future Work
 
