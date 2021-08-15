@@ -12,6 +12,24 @@ output: distill::distill_article
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+# 1.Geospatial Visualization Instruction
+
+
+![](img\img1.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 If you want to explore the application, please click [<font size="3"  color="blue">*Visual Analytics App*</font>](https://rjourney-linan.shinyapps.io/visualizationapp/?_ga=2.87113489.869695179.1628960403-1663082463.1628304777)
