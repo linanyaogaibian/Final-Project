@@ -7,20 +7,25 @@ author:
     email: nan.li.2020@mitb.smu.edu.sg
     orcid: 0000-0002-1099-3857
     main: true
+poster_height: 33.11
+poster_width: 23.39
 affiliation:
   - num: 1
     address: Department of Computer and Information Systems,Singapore Management University
 main_findings:
-  - "Make **better posters** with RMarkdown + **posterdown**."
-  - '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.main_pic}'
-logoleft_name: '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/qr-code-black.png){.main-img-left}'
-logoright_name: '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.main-img-right}'
+  - "How to detect **Anomalies** by using **Route Map** + **Networking Visualization**?"
+  - '![](https://vast-challenge.github.io/2021/img/site-image_v1.jpg){.main_pic}'
+
 output: 
   posterdown::posterdown_betterland:
     self_contained: false
     pandoc_args: --mathjax
     highlight: haddock
     number_sections: false
+    poster_height: 33.11
+    poster_width: 23.39
+
+    
 link-citations: true
 bibliography: packages.bib
 ---
@@ -88,4 +93,5 @@ There are also some future improvements both in application and exploration dire
 
 ```{r, echo=FALSE,eval=FALSE}
 library(pagedown)
+pagedown::chrome_print("projectposter.html")
 ```
