@@ -57,17 +57,16 @@ knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
 
 In a fiction scenario,a gas-production company named Tethys-based GAStech has been operating a natural gas production site in the island country of Kronos and it has produced remarkable profits and developed strong relationships with the government of Kronos. However, GAStech has not been as successful in demonstrating environmental stewardship. And in January, 2014, the leaders of GAStech are celebrating their new-found fortune, but in the midst of this celebration, several employees of GAStech go missing. An organization known as the Protectors of Kronos (POK) is suspected in the disappearance, but things may not be what they seem.
 
-# Methods
+# Approach
+ 
+*1) Geospatial visualization*
 
-I will show here how to include poster elements that may be useful, such as an equation using mathjax:
+Geospatial visualization in this project is used to create an interactive route map which can track employee’s movement during Jan 6th and Jan 19th . For this visualization, we use multiple R packages. Tmap package offers a flexible, layer-based, and easy to use approach to create thematic maps, such as route map. Shiny package takes a fresh, interactive approach to telling the data story.
 
-$$
-E = mc^2
-$$
+*2) Interactive Data table visualization*
 
-To reference a citation you can add your `.bib` file to the working directory and name it in the YAML metadata or generate an automated one as done here, then you only need to reference the label value in the `.bib` file. For example this package is built on top of the wonderful {pagedown} package and I will cite it at the end of this sentance using this in the rmd `[@R-pagedown]` [@R-pagedown].
+To create an interactive transaction data table, DT package in R is used. The R package DT provides an R interface to the JavaScript library DataTables. In this project, loyalty dataset and credit/debit card dataset used by DT package is displayed as tables on HTML pages, and through argument settings, this data table provides filtering and sorting features.
 
-To get a better understanding of how to include features like these please refer to the {posterdown} [wiki](https://github.com/posterdown/wiki).
 
 **_Now on to the results!_**
 
@@ -75,43 +74,29 @@ To get a better understanding of how to include features like these please refer
 
 # Results
 
-Here you may have some figures to show off, bellow I have made a scatterplot with the infamous Iris dataset and I can even reference to the figure automatically like this, `Figure \@ref(fig:irisfigure)`, Figure \@ref(fig:irisfigure).
+*SOLUTIONS*
 
-```{r, irisfigure, fig.cap='Here is a caption for the figure. This can be added by using the "fig.cap" option in the r code chunk options, see this [link](https://yihui.name/knitr/options/#plots) from the legend himself, [Yihui Xie](https://twitter.com/xieyihui).', out.width="80%"}
-par(mar=c(2,2,0,1))
-plot(x = iris$Sepal.Length, y = iris$Sepal.Width,
-     col = iris$Species, pch = 19, xlab = "Sepal Length",
-     ylab = "Sepal Width")
-```
+Solution of issue 1:  Through data manipulation and visualization, this project labeled the stopping points and add tooltip to clarify and dig out more info of car movement and car owners. By input one or multiple Car ID and Tracking Day, users can observation employee’s daily routines and their home locations. Through this improvements, it can also provide the chance to identify their private or professional relationship by observing their daily connection and gathering spots.
 
-Maybe you want to show off some of that fancy code you spent so much time on to make that figure, well you can do that too! Just use the `echo=TRUE` option in the r code chunk options, Figure \@ref(fig:myprettycode)!
 
-```{r myprettycode, echo=FALSE,collapse=TRUE, fig.cap='Boxplots, so hot right now!', fig.height=3.5, out.width="80%"}
-#trim whitespace
-par(mar=c(2,2,0,0))
-#plot boxplots
-boxplot(iris$Sepal.Width~iris$Species,
-        col = "#008080", 
-        border = "#0b4545",
-        ylab = "Sepal Width (cm)",
-        xlab = "Species")
-```
+Solution of issue 2: Through the stopping points which show info about day and hour and the corresponding transaction record, users can easily see the relationships between car owners and credit card owner, which provides strong support for future detecting work for unusual transaction data.
 
-How about a neat table of data? See, Table \@ref(tab:iristable):
+# Future Work
 
-```{r, iristable}
-knitr::kable(
-  iris[1:8,1:5], format = "html",
-  caption = "A table made with the **knitr::kable** function.",
-  align = "c", col.names = c("Sepal <br> Length",
-                             "Sepal <br> Width",
-                             "Petal <br> Length",
-                             "Petal <br> Width",
-                             "Species"),
-  escape = FALSE)
-```
 
-# References
+There are also some future improvements both in application and exploration direction of this project. 
+
+### For application:###
+
+1.	Consider add “select all” action button. This will help to detect each day all the driver’s movement.
+2.	Instead of using Car ID as input, consider using Employee title and Employee department as input, which can help to find relationship between different departments.
+3.	 Consider Add starting time and end time in the tooltip, which can be more helpful for detecting suspicious gathering groups.
+
+### For future direction:###
+
+1.	Needs to develop more visualizations to summarize employee’s gathering spots to identify their private relationships.
+2.	Needs to combine products of social networking visualization and route map visualization to find more insights, like creating a dashboard to combine.
+
 ```{r, echo=FALSE,eval=FALSE}
 library(pagedown)
 ```
