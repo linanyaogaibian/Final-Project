@@ -1,7 +1,7 @@
 ---
 title: "Proposal"
 description: |
-  A new article created using the Distill format.
+  Proposal for Exploration of Vast Challenge 2021(Mini-challenge1&2)
 author:
   - name: LI NAN，LI YUE TING 
     url: https://example.com/norajones
@@ -22,7 +22,7 @@ Our project proposal is based on the background provided by Vast Challenge 2021.
 
 This Vast challenge requires challengers to help people to understand the complex relationships among people and organizations that may have contributed to these events using visualization techniques. 
 
-* For mini-challenge1:   
+* For mini-challenge1: 
 
  * Providing a set of current and historical news reports, as well as resumes of numerous GAStech employees and email headers from two weeks of internal GAStech company email, we will be able to identify the relationships among people and organizations, also to picture the relationships and conditions that led up to the kidnapping. 
 
