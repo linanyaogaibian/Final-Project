@@ -13,6 +13,8 @@ navbar:
       href: Proposal.html
     - text: "Poster"
       href: projectposter.html
+    - text: "Paper"
+      href: paper.pdf
 output:
   distill::distill_article:
   posterdown::posterdown_html:
