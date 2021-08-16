@@ -1,102 +1,107 @@
 ---
 title: Poster for Vast Challenge 2021 Project
 author:
-  - name: Li NAN Li Yueting
+  - name: Li NAN
     affil: 1
     LinkedIn: linkedin.com/in/li-nan-63b9251a6
     email: nan.li.2020@mitb.smu.edu.sg
-    orcid: 0000-0002-1099-3857
-    main: true
+    orcid: '0000-0002-1099-3857'
+  - name: Li Yueting
+    LinkedIn: linkedin.com/in/yueting-li-9ab569208
+    email: ytli.2020@mitb.smu.edu.sg
+    affil: 2
 affiliation:
   - num: 1
-    address: "Department of Computer and Information Systems,Singapore Management University"
-main_findings:
-  - "Make **better posters** with RMarkdown + **posterdown**."
-  - '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.main_pic}'
-logoleft_name: '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/qr-code-black.png){.main-img-left}'
-logoright_name: '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.main-img-right}'
+    address: Singapore Management University
+  - num: 2
+    address: Singapore Management University
+column_numbers: 3
+logoright_name: https&#58;//raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png
+logoleft_name: https&#58;//raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png
 output: 
-  posterdown::posterdown_betterland:
+  posterdown::posterdown_html:
     self_contained: false
-    pandoc_args: --mathjax
-    highlight: haddock
-    number_sections: false
-link-citations: true
 bibliography: packages.bib
 ---
 
-```{r, include=FALSE}
-knitr::opts_chunk$set(results = 'asis',
-                      echo = FALSE,
-                      warning = FALSE,
-                      tidy = FALSE,
-                      message = FALSE,
-                      fig.align = 'center',
-                      out.width = "100%")
-options(knitr.table.format = "html") 
-```
-
-```{r myplot, include=FALSE}
-svg('myplot.svg')
-plot(iris$Sepal.Length, iris$Sepal.Width)
-dev.off()
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 # Introduction
 
 This is the `poster` which provides an overview of our project which is based on Vast Challenge 2021.
-It includes the following sections:
-•	Issues and problems •	Motivation •	Approach •	Results •	Future Work 
+In a fiction scenario,a gas-production company named Tethys-based GAStech has been operating a natural gas production site in the island country of Kronos and it has produced remarkable profits and developed strong relationships with the government of Kronos. However, GAStech has not been as successful in demonstrating environmental stewardship. And in January, 2014, the leaders of GAStech are celebrating their new-found fortune, but in the midst of this celebration, several employees of GAStech went missing. An organization known as the Protectors of Kronos (POK) is suspected in the disappearance, therefore analysis are conducted and an application is created related to the analysis.
+Therefore, three Mini-challenges are provided by VAST Challenge 2021 and the focus of this paper will be on mini-challenge1 and mini-challenge2.
 
+# Objectives
 
-```{r, include=FALSE}
-knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
-```
+In order to reach the goal, interactive tools are developed to addresses the following requirements: 
 
-## INTRODUCTION
+- What is the frequency pattern pattern in news reported that related to the event?
+- What is the network between employees? Is there any suspicious connections between them?
+- What is the suspicious pattern in company cars for employees’ personal and professional use? 
+- How to utilize GPS data to match card owners and the debit/credit card owners?
 
-In a fiction scenario,a gas-production company named Tethys-based GAStech has been operating a natural gas production site in the island country of Kronos and it has produced remarkable profits and developed strong relationships with the government of Kronos. However, GAStech has not been as successful in demonstrating environmental stewardship. And in January, 2014, the leaders of GAStech are celebrating their new-found fortune, but in the midst of this celebration, several employees of GAStech go missing. An organization known as the Protectors of Kronos (POK) is suspected in the disappearance, but things may not be what they seem.
 
 # Approach
  
-*1) Geospatial visualization*
+*1) Network visualization*
+
+The network visualization shows the connection between GAStech employees. The Department labels allow user to distinguish the department of nodes and the source of emails by different color. Also, in order to find out the most frequent email connections, the number of email engagement will be treated as the weight of the graph, and by altering the weight people may clearly realize the level of connections of communities in GAStech company.
+
+*2) Heatmap visualization*
+
+Heat map visualization to help user find the news details and the time variation of event heat. User may see the timeline and when the event draws high media attention.
+
+*3) Geospatial visualization*
 
 Geospatial visualization in this project is used to create an interactive route map which can track employee’s movement during Jan 6th and Jan 19th . For this visualization, we use multiple R packages. Tmap package offers a flexible, layer-based, and easy to use approach to create thematic maps, such as route map. Shiny package takes a fresh, interactive approach to telling the data story.
 
-*2) Interactive Data table visualization*
+*4) Interactive Data table visualization*
 
 To create an interactive transaction data table, DT package in R is used. The R package DT provides an R interface to the JavaScript library DataTables. In this project, loyalty dataset and credit/debit card dataset used by DT package is displayed as tables on HTML pages, and through argument settings, this data table provides filtering and sorting features.
 
+# Application Layout
+For the shiny application, the final output will consist of four parts.
 
-**_Now on to the results!_**
+*Network Demonstration:*
+The Network Demonstration tab enable users to find out the email connections between each of GAStech employees. 
+  ![](image\tab1.png){width=70%}
 
-<br>
+*Time Stamps:* 
+This tab present the Heat map visualization and DT table can help user find the news details and the time variation of the event heat.
+  ![](image\tab2.png){width=70%}
 
-# Results
+*Map Visualization:*
+The geospatial visualization and interactive data table help the user to understand and match the relationship between card owners and car drivers, and to provide insights of unusual movements of car drivers to detect suspicious persons and noticeable activities.
+  ![](image\tab3.png){width=70%}
 
-*SOLUTIONS*
-
-Solution of issue 1:  Through data manipulation and visualization, this project labeled the stopping points and add tooltip to clarify and dig out more info of car movement and car owners. By input one or multiple Car ID and Tracking Day, users can observation employee’s daily routines and their home locations. Through this improvements, it can also provide the chance to identify their private or professional relationship by observing their daily connection and gathering spots.
-
-
-Solution of issue 2: Through the stopping points which show info about day and hour and the corresponding transaction record, users can easily see the relationships between car owners and credit card owner, which provides strong support for future detecting work for unusual transaction data.
+*Backup table:*
+This is the backup table for network visualization which is similar to the DT table in the first tab - Network Demonstration, the only difference is this graph can be used to find the people who receive emails.
+  ![](image\tab4.png){width=70%}
 
 # Future Work
+This paper set out the development of a web application targeted at providing an interactive visualization tool to help minimize time to have a thorough understanding of person’s social connection and background (e.g. car owner/credit card owner/daily movement/daily spend) and detect suspicious patterns.
 
+Also By observing the timeline, it helps people quickly locate the time point of the incident for interactive comparison. And the Network visualization demonstrate the personal & official connections between people, which enable analysts to quickly understand a person’s social network and identify possible suspects and insiders.
 
-There are also some future improvements both in application and exploration direction of this project. 
+However, shiny app also have some demerits that needs to be improved in the future.
 
 ### For application:###
 
 1.	Consider add “select all” action button. This will help to detect each day all the driver’s movement.
 2.	Instead of using Car ID as input, consider using Employee title and Employee department as input, which can help to find relationship between different departments.
-3.	 Consider Add starting time and end time in the tooltip, which can be more helpful for detecting suspicious gathering groups.
+3.	Consider Add starting time and end time in the tooltip, which can be more helpful for detecting suspicious gathering groups.
+4.  There are only nodes that represent GAStech employees in network, however, there are more than emails within GAStech company provided in the data set, it might be useful to also include nodes outside the company for a vaster social connection evaluation
+5.  In order to investigate the time distribution of email sending, an comparison graph that gives the email activity related to weekday might be helpful
 
 ### For future direction:###
 
 1.	Needs to develop more visualizations to summarize employee’s gathering spots to identify their private relationships.
 2.	Needs to combine products of social networking visualization and route map visualization to find more insights, like creating a dashboard to combine.
 
-```{r, echo=FALSE,eval=FALSE}
-library(pagedown)
+
+```{r, include=FALSE}
+knitr::write_bib(c('knitr','rmarkdown','posterdown','pagedown'), 'packages.bib')
 ```
