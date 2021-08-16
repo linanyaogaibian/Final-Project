@@ -101,8 +101,8 @@ However, shiny app also have some demerits that needs to be improved in the futu
 1.	Needs to develop more visualizations to summarize employee’s gathering spots to identify their private relationships.
 2.	Needs to combine products of social networking visualization and route map visualization to find more insights, like creating a dashboard to combine.
 
-*shiny app link:* 
-https://liyueting.shinyapps.io/VisualAppGroup1/
+
+**Memo:**If you want to explore the application, please click [<font size="3"  color="blue">*Visual Analytics App*</font>](https://liyueting.shinyapps.io/VisualAppGroup1/)
 
 ```{r, include=FALSE}
 knitr::write_bib(c('knitr','rmarkdown','posterdown','pagedown'), 'packages.bib')
