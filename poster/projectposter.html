@@ -299,26 +299,25 @@ font-size: 20pt;
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <p>This is the <code>poster</code> which provides an overview of our project which is based on Vast Challenge 2021.
-In a fiction scenario,a gas-production company named Tethys-based GAStech has been operating a natural gas production site in the island country of Kronos and it has produced remarkable profits and developed strong relationships with the government of Kronos. However, GAStech has not been as successful in demonstrating environmental stewardship. And in January, 2014, the leaders of GAStech are celebrating their new-found fortune, but in the midst of this celebration, several employees of GAStech go missing. An organization known as the Protectors of Kronos (POK) is suspected in the disappearance, but things may not be what they seem.</p>
+In a fiction scenario,a gas-production company named Tethys-based GAStech has been operating a natural gas production site in the island country of Kronos and it has produced remarkable profits and developed strong relationships with the government of Kronos. However, GAStech has not been as successful in demonstrating environmental stewardship. And in January, 2014, the leaders of GAStech are celebrating their new-found fortune, but in the midst of this celebration, several employees of GAStech went missing. An organization known as the Protectors of Kronos (POK) is suspected in the disappearance, therefore analysis are conducted and an application is created related to the analysis.
+Therefore, three Mini-challenges are provided by VAST Challenge 2021 and the focus of this paper will be on mini-challenge1 and mini-challenge2.</p>
 </div>
 <div id="objectives" class="section level1">
 <h1>Objectives</h1>
 <p>In order to reach the goal, interactive tools are developed to addresses the following requirements:</p>
-<p>1)What is the frequency pattern pattern in news reported that related to the event?
-The answer is to visualize the pattern a heatmap can be adopted in order to see the timeline and when the event draws high media attention.</p>
-<p>2)What is the network between employees? is there any suspicious connections between them?
-A network graph will be presented to demonstrate the connections between employees. Also, in order to find out the most frequent email connections, the number of email engagement will be treated as the weight of the graph, and by altering the weight people may clearly realize the level of connections of communities in GAStech company.</p>
-<p>3)What is the suspicious pattern in company cars for employees’ personal and professional use?
-To utilize geographical visualization techniques to create car/truck routes of GAStech employees based on GPS dataset and also label parking points of car (parking more than 5 minutes) to dig out suspicious movement patterns.</p>
-<p>4)How to utilize GPS data to match card owners and the debit/credit card owners?
-To create interactive transaction data table to track unusual credit/debit card transactions records of GAStech employees and compare them with car parking points shown in visualization map.</p>
+<ul>
+<li>What is the frequency pattern pattern in news reported that related to the event?</li>
+<li>What is the network between employees? Is there any suspicious connections between them?</li>
+<li>What is the suspicious pattern in company cars for employees’ personal and professional use?</li>
+<li>How to utilize GPS data to match card owners and the debit/credit card owners?</li>
+</ul>
 </div>
 <div id="approach" class="section level1">
 <h1>Approach</h1>
-<p><em>1) Network visualization</em>
-The network visualization shows the connection between GAStech employees. The Department labels allow user to distinguish the department of nodes and the source of emails by different color. User can select the ID of interested person, and the un-correlated nodes will fade to grey. Also user may slide the mouse wheel to zoom in/zoom out to see the person name of each node, hover the mouse to the node can also got the result by reading the tooltip.</p>
-<p><em>2) Heatmap visualization</em>
-Heat map visualization to help user find the news details and the time variation of event heat.</p>
+<p><em>1) Network visualization</em></p>
+<p>The network visualization shows the connection between GAStech employees. The Department labels allow user to distinguish the department of nodes and the source of emails by different color. Also, in order to find out the most frequent email connections, the number of email engagement will be treated as the weight of the graph, and by altering the weight people may clearly realize the level of connections of communities in GAStech company.</p>
+<p><em>2) Heatmap visualization</em></p>
+<p>Heat map visualization to help user find the news details and the time variation of event heat. User may see the timeline and when the event draws high media attention.</p>
 <p><em>3) Geospatial visualization</em></p>
 <p>Geospatial visualization in this project is used to create an interactive route map which can track employee’s movement during Jan 6th and Jan 19th . For this visualization, we use multiple R packages. Tmap package offers a flexible, layer-based, and easy to use approach to create thematic maps, such as route map. Shiny package takes a fresh, interactive approach to telling the data story.</p>
 <p><em>4) Interactive Data table visualization</em></p>
@@ -329,16 +328,16 @@ Heat map visualization to help user find the news details and the time variation
 <p>For the shiny application, the final output will consist of four parts.</p>
 <p><em>Network Demonstration:</em>
 The Network Demonstration tab enable users to find out the email connections between each of GAStech employees.
-<img src="image/tab1.png" style="width:60.0%" /></p>
+<img src="image/tab1.png" style="width:70.0%" /></p>
 <p><em>Time Stamps:</em>
 This tab present the Heat map visualization and DT table can help user find the news details and the time variation of the event heat.
-<img src="image/tab2.png" style="width:60.0%" /></p>
+<img src="image/tab2.png" style="width:70.0%" /></p>
 <p><em>Map Visualization:</em>
 The geospatial visualization and interactive data table help the user to understand and match the relationship between card owners and car drivers, and to provide insights of unusual movements of car drivers to detect suspicious persons and noticeable activities.
-<img src="image/tab3.png" style="width:60.0%" /></p>
+<img src="image/tab3.png" style="width:70.0%" /></p>
 <p><em>Backup table:</em>
 This is the backup table for network visualization which is similar to the DT table in the first tab - Network Demonstration, the only difference is this graph can be used to find the people who receive emails.
-<img src="image/tab4.png" style="width:60.0%" /></p>
+<img src="image/tab4.png" style="width:70.0%" /></p>
 </div>
 <div id="future-work" class="section level1">
 <h1>Future Work</h1>

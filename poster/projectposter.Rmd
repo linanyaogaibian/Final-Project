@@ -31,30 +31,28 @@ knitr::opts_chunk$set(echo = FALSE)
 # Introduction
 
 This is the `poster` which provides an overview of our project which is based on Vast Challenge 2021.
-In a fiction scenario,a gas-production company named Tethys-based GAStech has been operating a natural gas production site in the island country of Kronos and it has produced remarkable profits and developed strong relationships with the government of Kronos. However, GAStech has not been as successful in demonstrating environmental stewardship. And in January, 2014, the leaders of GAStech are celebrating their new-found fortune, but in the midst of this celebration, several employees of GAStech go missing. An organization known as the Protectors of Kronos (POK) is suspected in the disappearance, but things may not be what they seem.
+In a fiction scenario,a gas-production company named Tethys-based GAStech has been operating a natural gas production site in the island country of Kronos and it has produced remarkable profits and developed strong relationships with the government of Kronos. However, GAStech has not been as successful in demonstrating environmental stewardship. And in January, 2014, the leaders of GAStech are celebrating their new-found fortune, but in the midst of this celebration, several employees of GAStech went missing. An organization known as the Protectors of Kronos (POK) is suspected in the disappearance, therefore analysis are conducted and an application is created related to the analysis.
+Therefore, three Mini-challenges are provided by VAST Challenge 2021 and the focus of this paper will be on mini-challenge1 and mini-challenge2.
 
 # Objectives
+
 In order to reach the goal, interactive tools are developed to addresses the following requirements: 
 
-1)What is the frequency pattern pattern in news reported that related to the event?
-The answer is to visualize the pattern a heatmap can be adopted in order to see the timeline and when the event draws high media attention.
+- What is the frequency pattern pattern in news reported that related to the event?
+- What is the network between employees? Is there any suspicious connections between them?
+- What is the suspicious pattern in company cars for employees’ personal and professional use? 
+- How to utilize GPS data to match card owners and the debit/credit card owners?
 
-2)What is the network between employees? is there any suspicious connections between them?
-A network graph will be presented to demonstrate the connections between employees. Also, in order to find out the most frequent email connections, the number of email engagement will be treated as the weight of the graph, and by altering the weight people may clearly realize the level of connections of communities in GAStech company.
-
-3)What is the suspicious pattern in company cars for employees’ personal and professional use? 
-To utilize geographical visualization techniques to create car/truck routes of GAStech employees based on GPS dataset and also label parking points of car (parking more than 5 minutes) to dig out suspicious movement patterns. 
-
-4)How to utilize GPS data to match card owners and the debit/credit card owners?
-To create interactive transaction data table to track unusual credit/debit card transactions records of GAStech employees and compare them with car parking points shown in visualization map.
 
 # Approach
  
 *1) Network visualization*
-The network visualization shows the connection between GAStech employees. The Department labels allow user to distinguish the department of nodes and the source of emails by different color. User can select the ID of interested person, and the un-correlated nodes will fade to grey. Also user may slide the mouse wheel to zoom in/zoom out to see the person name of each node, hover the mouse to the node can also got the result by reading the tooltip.
+
+The network visualization shows the connection between GAStech employees. The Department labels allow user to distinguish the department of nodes and the source of emails by different color. Also, in order to find out the most frequent email connections, the number of email engagement will be treated as the weight of the graph, and by altering the weight people may clearly realize the level of connections of communities in GAStech company.
 
 *2) Heatmap visualization*
-Heat map visualization to help user find the news details and the time variation of event heat.
+
+Heat map visualization to help user find the news details and the time variation of event heat. User may see the timeline and when the event draws high media attention.
 
 *3) Geospatial visualization*
 
@@ -69,19 +67,19 @@ For the shiny application, the final output will consist of four parts.
 
 *Network Demonstration:*
 The Network Demonstration tab enable users to find out the email connections between each of GAStech employees. 
-  ![](image\tab1.png){width=60%}
+  ![](image\tab1.png){width=70%}
 
 *Time Stamps:* 
 This tab present the Heat map visualization and DT table can help user find the news details and the time variation of the event heat.
-  ![](image\tab2.png){width=60%}
+  ![](image\tab2.png){width=70%}
 
 *Map Visualization:*
 The geospatial visualization and interactive data table help the user to understand and match the relationship between card owners and car drivers, and to provide insights of unusual movements of car drivers to detect suspicious persons and noticeable activities.
-  ![](image\tab3.png){width=60%}
+  ![](image\tab3.png){width=70%}
 
 *Backup table:*
 This is the backup table for network visualization which is similar to the DT table in the first tab - Network Demonstration, the only difference is this graph can be used to find the people who receive emails.
-  ![](image\tab4.png){width=60%}
+  ![](image\tab4.png){width=70%}
 
 # Future Work
 This paper set out the development of a web application targeted at providing an interactive visualization tool to help minimize time to have a thorough understanding of person’s social connection and background (e.g. car owner/credit card owner/daily movement/daily spend) and detect suspicious patterns.

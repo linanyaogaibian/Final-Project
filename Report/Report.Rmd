@@ -54,7 +54,7 @@ A network graph will be presented to demonstrate the connections between employe
 3)What is the suspicious pattern in company cars for employees’ personal and professional use? 
 To utilize geographical visualization techniques to create car/truck routes of GAStech employees based on GPS dataset and also label parking points of car (parking more than 5 minutes) to dig out suspicious movement patterns. 
 
-4)how to utilize GPS data to match card owners and the debit/credit card owners?
+4)How to utilize GPS data to match card owners and the debit/credit card owners?
 To create interactive transaction data table to track unusual credit/debit card transactions records of GAStech employees and compare them with car parking points shown in visualization map.
 
 # METHODOLOGY 
@@ -83,8 +83,14 @@ Shiny is an R package that makes it easy to build interactive web apps straight 
 i) Input values can be changed by the user at any time, through interaction with customizable widgets. 
 ii) Output values and graphs react to changes in inputs, with the resulting outputs being reflected immediately.
 iii) Table and graph can be interactive by setting logic in server code.
-The output values react to changes in inputs, with the resulting outputs being reflected immediately. The design of the Shiny web app flowed from the key business questions of the data: i) First tab – Network Analysis (EDA) to form relationships between). 
-ii) Second tab – Geospatial visualization and interactive data table help the user understand and match the relationship between card owners and car drivers and also provide insights of unusual movements of car drivers to detect suspicious persons.
+The output values react to changes in inputs, with the resulting outputs being reflected immediately. 
+
+The design of the Shiny web app flowed from the key business questions of the data: 
+
+i) First tab- Network Analysis to form email relationships between GAStech employees. 
+ii) Second tab - Heat map visualization to help user find the news details and the time variation of event heat
+iii) Third tab - Geospatial visualization and interactive data table help the user understand and match the relationship between card owners and car drivers and also provide insights of unusual movements of car drivers to detect suspicious persons.
+iv) Forth tab - backup table for network visualization
 
 To give better understandings and guidance from users, we included a user guide to accompany each analysis technique featured in the app.
 
