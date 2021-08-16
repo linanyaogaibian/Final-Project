@@ -5,9 +5,9 @@ account: rjourney-linan
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4492970
-bundleId: 4923561
+bundleId: 4925780
 url: https://rjourney-linan.shinyapps.io/visualizationapp/
-when: 1628961672.31785
-lastSyncTime: 1628961672.31785
+when: 1629039694.07789
+lastSyncTime: 1629039694.07789
 asMultiple: FALSE
 asStatic: FALSE

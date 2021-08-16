@@ -2,18 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="generator" content="pandoc" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
-<title>Poster for Vast Challenge 2021 Project</title>
-
-<script src="projectposter_files/accessible-code-block-0.0.1/empty-anchor.js"></script>
-
-
-
 
 
 <!--
@@ -25,30 +16,178 @@ Font-awesome icons ie github or twitter
 <!--
 Google fonts api stuff
 -->
-<link href='https://fonts.googleapis.com/css?family=Special Elite' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Rasa' rel='stylesheet'>
 
-<!--
-Here are the required style attributes for css to make this poster work :)
--->
+
+
+<title>Poster for Vast Challenge 2021 Project</title>
+
+<script src="projectposter_files/header-attrs-2.10/header-attrs.js"></script>
+
+
+
+
+
 <style>
 @page {
-size: 23.39in 33.11in;
+size: 45in 38in;
 margin: 0;
 padding: 0;
-background-color: #ffffff;
 }
 body {
-margin: 0px;
-padding: 0px;
-width: 23.39in;
-height: 33.11in;
-text-align: justify;
+margin: 0;
 font-size: 45px;
-background-color: #FFFFFF;
-color: #000000;
+width: 45in;
+height: 38in;
+padding: 0;
+text-align: justify;
+font-family: Palatino;
 }
-/* RMarkdown Class Styles */
+.poster_wrap {
+width: 45in;
+height: 38in;
+padding: 0cm;
+}
+.title_container {
+width: 45in;
+height: calc(38in * 0.15);
+overflow: hidden;
+background-color: #0b4545;
+border: 0 solid #0b4545;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #0b4545;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #0b4545;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Palatino;
+}
+/* unvisited link */
+a:link {
+color: #cc0000;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #cc0000;
+}
+
+/* mouse over link */
+a:hover {
+color: #cc0000;
+}
+
+/* selected link */
+a:active {
+color: #cc0000;
+}
+.poster_body {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #0b4545;
+-moz-column-rule-color: #0b4545;
+column-rule-color: #0b4545;
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 75pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(45in + 0 + 0);
+height: calc(38in * 0.83);
+padding-top: calc(38in * 0.005);
+padding-bottom: calc(38in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #ffffff;
+font-size: 50pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 65pt;
+border: 2mm solid #0b4545;
+background-color: #0b4545;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
 /* center align leaflet map,
 from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
 .html-widget {
@@ -66,219 +205,71 @@ background-color: #dddddd40;
 border-radius: 4mm;
 padding: 4mm;
 width: 75%;
-margin: auto;
-margin-top: 1em;
-margin-bottom: 1em;
 /* align-items: center; */
+margin: auto;
+padding-left: 2cm;
 }
 code.sourceCode.r{
 background-color: transparent;
 font-size: 20pt;
 border-radius: 2mm;
 }
-code {
+.caption {
 font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
 font-family: monospace;
 background-color: #00808024;
 color: #0b4545;
 padding: 1.2mm;
-line-height: 1;
 border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
 }
 caption {
 margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
 font-size: 20pt;
-font-style: italic;
-}
-
-tbody tr:nth-child(odd) {
-    background-color: #0b454520;
-}
-.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
-  border-spacing: 0;
-  font-size: 40%;
-  border-style: none;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-right: 1em;
-  padding-left: 1em;
-  line-height: 1em;
-}
-table {
-  margin: auto;
-}
-th {
-  padding-left: 5mm;
-  padding-right: 5mm;
-}
-.caption {
-font-size: 20pt;
-font-style: italic;
-padding-top: 0;
-}
-.references {
-font-size: 20px;
-line-height: 90%;
-}
-/* Create three unequal columns that floats next to each other */
-.column {
-float: left;
-padding: 0px;
-}
-.outer {
-width: 23.39in;
-height: 33.11in;
--webkit-column-count: 2; /* Chrome, Safari, Opera */
--moz-column-count: 2; /* Firefox */
-column-count: 2;
--webkit-column-fill: auto;
--moz-column-fill: auto;
-column-fill: auto;
--webkit-column-rule-width: 50%;
--moz-column-rule-width: 50%;
-column-rule-width: 50%;
--webkit-column-rule-style: solid;
--moz-column-rule-style: solid;
-column-rule-style: solid;
--webkit-column-rule-color: black;
--moz-column-rule-color: black;
-column-rule-color: black;
--webkit-column-gap: 50%;
-background-color: #ffffff;
-font-family: Rasa;
-color: #000000;
-}
-span.citation {
-  color: #008080;
-  font-weight: bold;
-}
-a {
-text-decoration: none;
-color: #008080;
-}
-#title {
-font-size: 125pt;
-text-align: left;
-margin: 0;
-line-height: 90%;
-border-bottom: 0;
-}
-#author {
-color: #0b4545;
-margin: 0;
-line-height: 90%;
-font-size: 1.17em;
-}
-#affiliation {
-padding-top: 1em;
-color: #00000060;
-font-style: italic;
-font-size: 25px;
-margin: 0;
-}
-sup {
-color: #cc0000;
-}
-.affiliation sup {
-font-size: 20px;
-}
-.author sup {
-font-size: 30px;
-}
-.author_extra {
-color: #008080;
-margin: 0;
-line-height: 85%;
-font-size: 35px;
-}
-.outer h1 {
-text-align: center;
-margin-top: 0.5in;
-margin-bottom: 0.5in;
-}
-.outer h2 {
-text-align: center;
-}
-.outer p {
-color: #000000;
-}
-.outer ol {
-text-align: left;
-}
-.main {
-width: calc(23.39in / 2);
-height: 33.11in;
-position: absolute;
-margin-left: calc(23.39in / 4);
-background-color: #0b4545;
-color: #FFFFFF90;
-font-family: Special Elite;
-background-image: linear-gradient(#0b4545 50%, #008080);
-}
-.main strong {
-color: #FFFFFF;
-}
-img.main-img-left {
-width: 20%;
-left: 0.5in;
-bottom: 0.2in;
-position: absolute;
-}
-img.main-img-right {
-width: 18%;
-right: 0.5in;
-bottom: 0.2in;
-position: absolute;
-}
-.main p {
-padding-top: 20%;
-font-size: 170px;
-text-align: left;
-}
-.fab {
-color: #00000060;
-font-size: 25px;
-}
-.twitter, i {
-color: #00000060;
-font-size: 35px;
-text-decoration: none;
-}
-a.email {
-text-decoration: none;
-color: #00000060;
-font-size: 35px;
-}
-.envelope {
-color: #00000060;
-font-size: 5px;
-text-decoration: none;
-}
-.poster_wrap {
-width: 23.39in;
-height: 33.11in;
-padding: 0cm;
-background-color: #ffffff;
-}
-span > #tab:mytable {
-  font-weight: bold;
-}
-.section {
-  padding-left: 10mm;
-  padding-right: 10mm;
-}
-.main p {
-  padding-left: 30mm;
-  padding-right: 30mm;
-}
-.main_pic {
-  width: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 .orcid img {
-  width: 3%;
+  width: 1em;
 }
 </style>
 </head>
@@ -286,60 +277,82 @@ span > #tab:mytable {
 
 
 <div class="poster_wrap">
-<div class="column outer">
-<br>
-<div class="title section">
-<h1 id="title">Poster for Vast Challenge 2021 Project</h1>
-<br>
-<h3 id="author" class="author">
-
-Li NAN Li Yueting<sup> 1, <a class="orcid" href="https://orcid.org/0000-0002-1099-3857"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup><br>
-
-<a class='envelope'><i class="fas fa-envelope"></i></a> <a href="mailto:nan.li.2020@mitb.smu.edu.sg" class="email">nan.li.2020@mitb.smu.edu.sg</a> <br>
-</h3>
-
-<h5 id="author_extra" class="author_extra">
-</h5>
-
-<p id="affiliation" class="affiliation">
-<sup>1</sup> Department of Computer and Information Systems,Singapore Management University
-</p>
-
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+<img src= 'https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png' style="width: 80%">
 </div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">Poster for Vast Challenge 2021 Project</h1>
+<h3 id="author">Li NAN<sup>1, <a class="orcid" href="https://orcid.org/0000-0002-1099-3857"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup>, Li Yueting<sup>2</sup></h3><br>
+<h5 id="affiliation"><sup>1</sup> Singapore Management University<br> <sup>2</sup> Singapore Management University</h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+<img src=https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png style="width: 80%">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <p>This is the <code>poster</code> which provides an overview of our project which is based on Vast Challenge 2021.
-It includes the following sections:
-• Issues and problems • Motivation • Approach • Results • Future Work</p>
-<div id="introduction-1" class="section level2">
-<h2>INTRODUCTION</h2>
-<p>In a fiction scenario,a gas-production company named Tethys-based GAStech has been operating a natural gas production site in the island country of Kronos and it has produced remarkable profits and developed strong relationships with the government of Kronos. However, GAStech has not been as successful in demonstrating environmental stewardship. And in January, 2014, the leaders of GAStech are celebrating their new-found fortune, but in the midst of this celebration, several employees of GAStech go missing. An organization known as the Protectors of Kronos (POK) is suspected in the disappearance, but things may not be what they seem.</p>
+In a fiction scenario,a gas-production company named Tethys-based GAStech has been operating a natural gas production site in the island country of Kronos and it has produced remarkable profits and developed strong relationships with the government of Kronos. However, GAStech has not been as successful in demonstrating environmental stewardship. And in January, 2014, the leaders of GAStech are celebrating their new-found fortune, but in the midst of this celebration, several employees of GAStech go missing. An organization known as the Protectors of Kronos (POK) is suspected in the disappearance, but things may not be what they seem.</p>
 </div>
+<div id="objectives" class="section level1">
+<h1>Objectives</h1>
+<p>In order to reach the goal, interactive tools are developed to addresses the following requirements:</p>
+<p>1)What is the frequency pattern pattern in news reported that related to the event?
+The answer is to visualize the pattern a heatmap can be adopted in order to see the timeline and when the event draws high media attention.</p>
+<p>2)What is the network between employees? is there any suspicious connections between them?
+A network graph will be presented to demonstrate the connections between employees. Also, in order to find out the most frequent email connections, the number of email engagement will be treated as the weight of the graph, and by altering the weight people may clearly realize the level of connections of communities in GAStech company.</p>
+<p>3)What is the suspicious pattern in company cars for employees’ personal and professional use?
+To utilize geographical visualization techniques to create car/truck routes of GAStech employees based on GPS dataset and also label parking points of car (parking more than 5 minutes) to dig out suspicious movement patterns.</p>
+<p>4)How to utilize GPS data to match card owners and the debit/credit card owners?
+To create interactive transaction data table to track unusual credit/debit card transactions records of GAStech employees and compare them with car parking points shown in visualization map.</p>
 </div>
 <div id="approach" class="section level1">
 <h1>Approach</h1>
-<p><em>1) Geospatial visualization</em></p>
+<p><em>1) Network visualization</em>
+The network visualization shows the connection between GAStech employees. The Department labels allow user to distinguish the department of nodes and the source of emails by different color. User can select the ID of interested person, and the un-correlated nodes will fade to grey. Also user may slide the mouse wheel to zoom in/zoom out to see the person name of each node, hover the mouse to the node can also got the result by reading the tooltip.</p>
+<p><em>2) Heatmap visualization</em>
+Heat map visualization to help user find the news details and the time variation of event heat.</p>
+<p><em>3) Geospatial visualization</em></p>
 <p>Geospatial visualization in this project is used to create an interactive route map which can track employee’s movement during Jan 6th and Jan 19th . For this visualization, we use multiple R packages. Tmap package offers a flexible, layer-based, and easy to use approach to create thematic maps, such as route map. Shiny package takes a fresh, interactive approach to telling the data story.</p>
-<p><em>2) Interactive Data table visualization</em></p>
+<p><em>4) Interactive Data table visualization</em></p>
 <p>To create an interactive transaction data table, DT package in R is used. The R package DT provides an R interface to the JavaScript library DataTables. In this project, loyalty dataset and credit/debit card dataset used by DT package is displayed as tables on HTML pages, and through argument settings, this data table provides filtering and sorting features.</p>
-<p><strong><em>Now on to the results!</em></strong></p>
-<p><br></p>
 </div>
-<div id="results" class="section level1">
-<h1>Results</h1>
-<p><em>SOLUTIONS</em></p>
-<p>Solution of issue 1: Through data manipulation and visualization, this project labeled the stopping points and add tooltip to clarify and dig out more info of car movement and car owners. By input one or multiple Car ID and Tracking Day, users can observation employee’s daily routines and their home locations. Through this improvements, it can also provide the chance to identify their private or professional relationship by observing their daily connection and gathering spots.</p>
-<p>Solution of issue 2: Through the stopping points which show info about day and hour and the corresponding transaction record, users can easily see the relationships between car owners and credit card owner, which provides strong support for future detecting work for unusual transaction data.</p>
+<div id="application-layout" class="section level1">
+<h1>Application Layout</h1>
+<p>For the shiny application, the final output will consist of four parts.</p>
+<p><em>Network Demonstration:</em>
+The Network Demonstration tab enable users to find out the email connections between each of GAStech employees.
+<img src="image/tab1.png" style="width:60.0%" /></p>
+<p><em>Time Stamps:</em>
+This tab present the Heat map visualization and DT table can help user find the news details and the time variation of the event heat.
+<img src="image/tab2.png" style="width:60.0%" /></p>
+<p><em>Map Visualization:</em>
+The geospatial visualization and interactive data table help the user to understand and match the relationship between card owners and car drivers, and to provide insights of unusual movements of car drivers to detect suspicious persons and noticeable activities.
+<img src="image/tab3.png" style="width:60.0%" /></p>
+<p><em>Backup table:</em>
+This is the backup table for network visualization which is similar to the DT table in the first tab - Network Demonstration, the only difference is this graph can be used to find the people who receive emails.
+<img src="image/tab4.png" style="width:60.0%" /></p>
 </div>
 <div id="future-work" class="section level1">
 <h1>Future Work</h1>
-<p>There are also some future improvements both in application and exploration direction of this project.</p>
+<p>This paper set out the development of a web application targeted at providing an interactive visualization tool to help minimize time to have a thorough understanding of person’s social connection and background (e.g. car owner/credit card owner/daily movement/daily spend) and detect suspicious patterns.</p>
+<p>Also By observing the timeline, it helps people quickly locate the time point of the incident for interactive comparison. And the Network visualization demonstrate the personal &amp; official connections between people, which enable analysts to quickly understand a person’s social network and identify possible suspects and insiders.</p>
+<p>However, shiny app also have some demerits that needs to be improved in the future.</p>
 <div id="for-application" class="section level3">
 <h3>For application:</h3>
 <ol style="list-style-type: decimal">
 <li>Consider add “select all” action button. This will help to detect each day all the driver’s movement.</li>
 <li>Instead of using Car ID as input, consider using Employee title and Employee department as input, which can help to find relationship between different departments.</li>
 <li>Consider Add starting time and end time in the tooltip, which can be more helpful for detecting suspicious gathering groups.</li>
+<li>There are only nodes that represent GAStech employees in network, however, there are more than emails within GAStech company provided in the data set, it might be useful to also include nodes outside the company for a vaster social connection evaluation</li>
+<li>In order to investigate the time distribution of email sending, an comparison graph that gives the email activity related to weekday might be helpful</li>
 </ol>
 </div>
 <div id="for-future-direction" class="section level3">
@@ -350,13 +363,9 @@ It includes the following sections:
 </ol>
 </div>
 </div>
+</div>
+</div>
 
-</div>
-<div class="main">
-<p>Make <strong>better posters</strong> with RMarkdown + <strong>posterdown</strong>.<br><br> <img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png" class="main_pic" /></p>
-<img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/qr-code-black.png" class="main-img-left" />
-<img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png" class="main-img-right" />
-</div>
 </div>
 
 

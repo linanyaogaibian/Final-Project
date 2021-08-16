@@ -1,0 +1,13 @@
+name: VisualAppGroup1
+title: VisualAppGroup1
+username:
+account: liyueting
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4495100
+bundleId: 4925902
+url: https://liyueting.shinyapps.io/VisualAppGroup1/
+when: 1629042565.38929
+lastSyncTime: 1629042565.38929
+asMultiple: FALSE
+asStatic: FALSE

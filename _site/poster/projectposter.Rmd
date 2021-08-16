@@ -5,25 +5,22 @@ author:
     affil: 1
     LinkedIn: linkedin.com/in/li-nan-63b9251a6
     email: nan.li.2020@mitb.smu.edu.sg
+    orcid: 0000-0002-1099-3857
     main: true
-poster_height: "33.11in"
-poster_width: "23.39in"
 affiliation:
   - num: 1
-    address: Department of Computer and Information Systems,Singapore Management University
+    address: "Department of Computer and Information Systems,Singapore Management University"
 main_findings:
-  - "How to detect **Anomalies** by using **Route Map** + **Networking Visualization**?"
-  - '![](https://vast-challenge.github.io/2021/img/site-image_v1.jpg){.main_pic}'
-
+  - "Make **better posters** with RMarkdown + **posterdown**."
+  - '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.main_pic}'
+logoleft_name: '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/qr-code-black.png){.main-img-left}'
+logoright_name: '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.main-img-right}'
 output: 
   posterdown::posterdown_betterland:
     self_contained: false
     pandoc_args: --mathjax
     highlight: haddock
     number_sections: false
-
-
-    
 link-citations: true
 bibliography: packages.bib
 ---
@@ -43,6 +40,17 @@ options(knitr.table.format = "html")
 svg('myplot.svg')
 plot(iris$Sepal.Length, iris$Sepal.Width)
 dev.off()
+```
+
+# Introduction
+
+This is the `poster` which provides an overview of our project which is based on Vast Challenge 2021.
+It includes the following sections:
+•	Issues and problems •	Motivation •	Approach •	Results •	Future Work 
+
+
+```{r, include=FALSE}
+knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
 ```
 
 ## INTRODUCTION
@@ -70,13 +78,8 @@ To create an interactive transaction data table, DT package in R is used. The R 
 
 Solution of issue 1:  Through data manipulation and visualization, this project labeled the stopping points and add tooltip to clarify and dig out more info of car movement and car owners. By input one or multiple Car ID and Tracking Day, users can observation employee’s daily routines and their home locations. Through this improvements, it can also provide the chance to identify their private or professional relationship by observing their daily connection and gathering spots.
 
-![](img/img2.png){width=100%}
 
 Solution of issue 2: Through the stopping points which show info about day and hour and the corresponding transaction record, users can easily see the relationships between car owners and credit card owner, which provides strong support for future detecting work for unusual transaction data.
-![](img/img4.png){width=100%}
-
-
-
 
 # Future Work
 
@@ -96,5 +99,4 @@ There are also some future improvements both in application and exploration dire
 
 ```{r, echo=FALSE,eval=FALSE}
 library(pagedown)
-pagedown::chrome_print("projectposter.html")
 ```
