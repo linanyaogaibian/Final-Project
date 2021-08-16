@@ -84,7 +84,6 @@ The forth tab names Backup table is a backup table which is similar to the DT ta
 
   ![](img/DT.png)
 
-
 **Memo:**If you want to explore the application, please click [<font size="3"  color="blue">*Visual Analytics App*</font>](https://liyueting.shinyapps.io/VisualAppGroup1/)
 
 
