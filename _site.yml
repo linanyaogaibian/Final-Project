@@ -1,7 +1,7 @@
 name: "Final Project"
 title: "Final Project"
 description: |
-  Final Project:Please back to Homepage before enter other websites
+  Final Project:Please back to Homepage before enter other websites pages
 output_dir: "_site"
 navbar:
   right:
