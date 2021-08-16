@@ -187,3 +187,5 @@ For the Network Visualization:
 
 # ACKNOWLEDGMENTS
 The authors thank Associate Professor, KAM Tin Seong, Singapore Management University for his support and guidance, Classmate Liu Yang Guang for giving advice and suggestions for data visualization and Classmate Syed Ahmad Zaki whose assignment expand ideas and logics.
+
+**Memo:**If you want to explore the application, please click [<font size="3"  color="blue">*Visual Analytics App*</font>](https://liyueting.shinyapps.io/VisualAppGroup1/)
