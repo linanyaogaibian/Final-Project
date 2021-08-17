@@ -2,9 +2,6 @@
 title: "Shiny App"
 author: "Li Nan, LiYueting"
 date: "8/17/2021"
-
-
-csl: acm-sig-proceedings.csl
 output: html_document
 ---
 
