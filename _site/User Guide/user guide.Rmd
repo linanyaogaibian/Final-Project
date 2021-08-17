@@ -80,13 +80,11 @@ This time range controls both DT table and Heatmap visualization, user can set a
 
 
 # 5.Backup table Instruction
-The forth tab names Backup table is a backup table which similar to the DT table in Email Visualization, the only difference here is this graph can be used to find the people who receive emails.
+The forth tab names Backup table is a backup table which is similar to the DT table in Email Visualization, the only difference here is this graph can be used to find the people who receive emails.
 
   ![](img/DT.png)
 
-
 **Memo:**If you want to explore the application, please click [<font size="3"  color="blue">*Visual Analytics App*</font>](https://liyueting.shinyapps.io/VisualAppGroup1/)
-
 
 
 

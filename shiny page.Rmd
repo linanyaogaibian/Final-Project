@@ -1,0 +1,15 @@
+---
+title: "Shiny App"
+author: "Li Nan, LiYueting"
+date: "8/17/2021"
+
+bibliography: sigproc.bib
+csl: acm-sig-proceedings.csl
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Memo:**If you want to explore the application, please click [<font size="3"  color="blue">*Visual Analytics App*</font>](https://liyueting.shinyapps.io/VisualAppGroup1/)
